@@ -35,9 +35,7 @@
                         <h3>{{ item.title }}</h3>
                     </a>
                     <span class="author">{{ item.publish_date}} - {{ item.user.name }}</span>
-                    <div class="excerpt">
-                        {{ item.get_short_content(300) | markdown }}
-                    </div>
+                    {{ item.get_short_content(300) | markdown }}
                 </article>
             {% endfor %}
         </div>
